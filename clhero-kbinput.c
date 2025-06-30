@@ -20,8 +20,8 @@
 //       probably use a config text file for easy editing.
 // TODO: consider looking into <xinput.h> or hidapi for controller support?
 // TODO: fix bugs:
-	// when you make a note, the msot recent not disappears for one frame.
-	// sometimes the notes will jump back and forth by a bit.
+//       - when you make a note, the msot recent not disappears for one frame.
+//       - sometimes the notes will jump back and forth by a bit.
 // TODO: make it save your data across exits without using the windows registry.
 // TODO: have a way to change the colors of everything.
 //       the outer fret things should be around 112/159 times the inner.
@@ -29,6 +29,8 @@
 // TODO: make it so it closes other instances of the program if you open a new one.
 // TODO: finish the `kpct` (key press count) stuff.
 // TODO: actually handle bind changes after you click on a fret.
+// TODO: add default keybinds to the help text?
+//       at least mention that backspace removes notes and resets input counts.
 
 
 #ifndef _WIN64
