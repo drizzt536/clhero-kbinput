@@ -33,11 +33,11 @@ raylib:
 ifeq ($(RAYLIB_VER),LATEST)
 	version=$$(curl -fsi https://github.com/raysan5/raylib/releases/latest | findstr ^Location | sed -E 's:.+/::'); \
 	wget --no-cache --quiet https://github.com/raysan5/raylib/releases/download/$${version}/raylib-$${version}_win64_mingw-w64.zip; \
-	unzip -qjd raylib raylib-$${version}_win64_mingw-w64.zip -x *dll* *E* *math.h *gl.h; \
+	unzip -qjd raylib raylib-$${version}_win64_mingw-w64.zip -x *dll* */*E* *math.h *gl.h; \
 	rm raylib-$${version}_win64_mingw-w64.zip
 else
 	wget --no-cache --quiet "https://github.com/raysan5/raylib/releases/download/$(RAYLIB_VER)/raylib-$(RAYLIB_VER)_win64_mingw-w64.zip"
-	unzip -qjd raylib raylib-$(RAYLIB_VER)_win64_mingw-w64.zip -x *dll* *E* *math.h *gl.h
+	unzip -qjd raylib raylib-$(RAYLIB_VER)_win64_mingw-w64.zip -x *dll* */*E* *math.h *gl.h
 	rm raylib-$(RAYLIB_VER)_win64_mingw-w64.zip
 endif
 	@echo "" # empty line.

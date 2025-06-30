@@ -11,11 +11,6 @@
  *  - https://github.com/raysan5/raylib
 */
 
-#ifndef SAVEFILE
-	#define SAVEFILE "./clhero-kbinput.save"
-#endif
-
-
 // TODO: remember the previous size and position of the window through program exits.
 //       probably use a config text file for easy editing.
 // TODO: consider looking into <xinput.h> or hidapi for controller support?
@@ -26,12 +21,17 @@
 // TODO: have a way to change the colors of everything.
 //       the outer fret things should be around 112/159 times the inner.
 //       the note colors should either be custom, or derived from the fret colors
+//       this probably requires refactoring how the colors work.
 // TODO: make it so it closes other instances of the program if you open a new one.
 // TODO: finish the `kpct` (key press count) stuff.
 // TODO: actually handle bind changes after you click on a fret.
 // TODO: add default keybinds to the help text?
 //       at least mention that backspace removes notes and resets input counts.
 
+
+#ifndef SAVEFILE
+	#define SAVEFILE "./clhero-kbinput.save"
+#endif
 
 #ifndef _WIN64
 	#error "this program only works on 64-bit windows."
