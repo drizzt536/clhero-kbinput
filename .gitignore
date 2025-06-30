@@ -1,0 +1,6 @@
+/raylib
+*.exe
+*.o
+
+# unused script for building raylib from source.
+/raylib-build.ps1
