@@ -1,4 +1,5 @@
 // compile instructions: make
+// 7z a -t7z -mx=9 clhero-kbinput.7z clhero-kbinput.exe
 
 /*
  * exit codes:
@@ -1178,7 +1179,7 @@ parse_cli_args:
 	}
 
 
-	if (!save_cfgfile) {
+	if (save_cfgfile) {
 		Vector2 tmp  = GetWindowPosition();
 		window_pos.x = tmp.x;
 		window_pos.y = tmp.y;
