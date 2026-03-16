@@ -2,7 +2,7 @@
 extern GetCommandLineW, CommandLineToArgvW, _crt_atexit
 global init_args, atexit
 
-;; see ../../NASM/winapi/setup_argc_argv.nasm for the original unchanged file.
+;; see https://github.com/drizzt536/files/blob/main/NASM/winapi/setup_argc_argv.nasm for the original unchanged file.
 
 segment .text
 	
@@ -52,6 +52,6 @@ init_args:
 	leave
 	ret
 
-;; this function is just so ld doesn't complain.
+;; this function is just so ld doesn't complain. a macro doesn't work.
 atexit:
 	jmp 	_crt_atexit
